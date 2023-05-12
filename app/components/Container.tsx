@@ -1,10 +1,12 @@
 "user client";
 
+import { ReactNode } from "react";
+
 interface ContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
+const Container = ({ children }: ContainerProps) => {
   return (
     <div
       className="
