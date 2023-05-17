@@ -1,3 +1,4 @@
+// this is a server component
 import RegisterModal from "./components/modals/RegisterModal";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
