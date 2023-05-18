@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import { IconType } from "react-icons";
 
 interface ButtonProps {
@@ -10,18 +11,18 @@ interface ButtonProps {
   icon?: IconType;
 }
 
-const Button = ({
-  label,
-  onClick,
-  disabled,
+const Button: React.FC<ButtonProps> = ({ 
+  label, 
+  onClick, 
+  disabled, 
   outline,
   small,
   icon: Icon,
-}: ButtonProps) => {
-  return (
+}) => {
+  return ( 
     <button
-      onClick={onClick}
       disabled={disabled}
+      onClick={onClick}
       className={`
         relative
         disabled:opacity-70
@@ -30,14 +31,14 @@ const Button = ({
         hover:opacity-80
         transition
         w-full
-        ${outline ? "bg-white" : "bg-rose-500"}
-        ${outline ? "border-black" : "border-rose-500"}
-        ${outline ? "text-black" : "text-white"}
-        ${small ? "py-1" : "py-3"}
-        ${small ? "text-sm" : "text-md"}
-        ${small ? "font-light" : "font-semibold"}
-        ${small ? "border-[1px]" : "border-2"}
-    `}
+        ${outline ? 'bg-white' : 'bg-rose-500'}
+        ${outline ? 'border-black' : 'border-rose-500'}
+        ${outline ? 'text-black' : 'text-white'}
+        ${small ? 'text-sm' : 'text-md'}
+        ${small ? 'py-1' : 'py-3'}
+        ${small ? 'font-light' : 'font-semibold'}
+        ${small ? 'border-[1px]' : 'border-2'}
+      `}
     >
       {Icon && (
         <Icon
@@ -46,11 +47,12 @@ const Button = ({
             absolute
             left-4
             top-3
-        "
+          "
         />
       )}
       {label}
     </button>
-  );
-};
+   );
+}
+ 
 export default Button;
